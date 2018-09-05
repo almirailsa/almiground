@@ -1,3 +1,20 @@
+stages:
+  - name: install
+    # require the branch name to be master (note for PRs this is the base branch name)
+    if: branch = master
+  - name: compile
+    # require the branch name to be master (note for PRs this is the base branch name)
+    if: branch = master
+  - name: test:
+    # require the branch name to be master (note for PRs this is the base branch name)
+    if: branch = master
+  - name: package:
+    # require the branch name to be master (note for PRs this is the base branch name)
+    if: branch = master
+  - name: deploy:
+    # require the branch name to be master (note for PRs this is the base branch name)
+    if: branch = master
+    
 language: node_js
 
 node_js:
@@ -5,26 +22,22 @@ node_js:
   
 install:
   - npm install
-
-script:
+  - npm install -g vsce
+  
+compile:
   - npm run compile
+
+test:
   - npm run test
 
-before_deploy:
-- npm install -g vsce;
-- vsce package;
+package:
+- vsce package
 
 deploy:
-
 - provider: script
   script: vsce publish -p $VSCODE
-  skip_cleanup: true
-  on:
-    branch: master
-    
-- provider: npm
-  email: "YOUR_EMAIL_ADDRESS"
-  api_key: $NPM
-  on:
-    branch: master
+  
+ -provider: script
+  script: bash scripts/npm-deploy.sh
+ 
   
