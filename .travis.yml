@@ -38,6 +38,6 @@ deploy:
   script: vsce publish -p $VSCODE
   
  -provider: script
-  script: bash scripts/npm-deploy.sh
+  script: bash scripts/npm-deploy.sh $GITPASS
  
   
