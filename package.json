@@ -3,7 +3,7 @@
     "displayName": "vscode-dummy",
     "description": "A dummy extension",
     "version": "0.0.2",
-    "publisher": "me",
+    "publisher": "me1",
     "engines": {
         "vscode": "^1.23.0"
     },
