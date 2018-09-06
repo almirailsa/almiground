@@ -13,11 +13,11 @@ stages:
 jobs:
   include:
     install:
-      npm install
-      npm install -g vsce
-      npm install typescript -g
-      tsc
-      vsce package
+      - npm install
+      - npm install -g vsce
+      - npm install typescript -g
+      - tsc
+      - vsce package
     deploy:
       - provider: script
         script: bash scripts/npm-deploy.sh $GITPASS
