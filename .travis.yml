@@ -8,7 +8,6 @@ node_js:
 
 stages:
   - install
-  - compile
   - package
   - deploy
 
@@ -17,9 +16,8 @@ jobs:
     install:
       npm install
       npm install -g vsce
+      npm run compile
       
-    compile:
-      - npm run compile
     package:
       - vsce package
     deploy:
