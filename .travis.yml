@@ -15,7 +15,6 @@ stages:
 jobs:
   include:
     install:
-    on: master
       npm install
       npm install -g vsce
       
