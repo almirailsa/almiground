@@ -14,4 +14,8 @@ git add .
 
 git commit -m "Auto-update from Travis CI"
 
-git push --set-upstream https://${1}@github.com/morganing/alminio.git master
+git remote rm origin
+
+git remote add origin https://morganing:$1@github.com/morganing/alminio.git
+
+git push --set-upstream https://morganing:$1@github.com/morganing/alminio.git master
