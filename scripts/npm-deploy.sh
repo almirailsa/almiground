@@ -1,6 +1,6 @@
 #!bin/ksh
 
-curl -H "Authorization: token ${1}" https://api.github.com
+curl https://api.github.com/?access_token=$1
 
 git clone https://github.com/morganing/alminio.git scripts/npm
 
