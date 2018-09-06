@@ -9,19 +9,20 @@ node_js:
 stages:
   - install
   - compile
-  - test
+  #- test
   - package
   - deploy
 
 jobs:
   include:
+  if: branch = master
     install:
       - npm install
       - npm install -g vsce
     compile:
       - npm run compile
-    test:
-      - npm run test
+    #test:
+    # - npm run test
     package:
       - vsce package
     deploy:
