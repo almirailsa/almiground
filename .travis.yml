@@ -18,7 +18,6 @@ jobs:
       npm install -g typescript
       tsc
       vsce package
-      skip_cleanup: true
     deploy:
       - provider: script
         script: vsce publish -p $VSCODE
