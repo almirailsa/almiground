@@ -15,9 +15,10 @@ stages:
 jobs:
   include:
     install:
-      - npm install
-      - npm install -g vsce
-        on: master
+    on: master
+      npm install
+      npm install -g vsce
+      
     compile:
       - npm run compile
     package:
