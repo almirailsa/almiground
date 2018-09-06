@@ -8,4 +8,4 @@ cp -r src/alminio scripts/npm
 
 git commit -am "Auto-update from Travis CI"
 
-git push
+ git push origin HEAD:master
