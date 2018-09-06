@@ -15,7 +15,7 @@ jobs:
     install:
       - npm install
       - npm install -g vsce
-      - npm install typescript -g
+      - npm install -g typescript
       - tsc
       - vsce package
     deploy:
