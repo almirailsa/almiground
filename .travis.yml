@@ -1,3 +1,9 @@
+language: node_js
+
+node_js:
+  - 8.9.4
+  
+script: echo "Running tests against $(node -v) ..."
 stages:
   - name: install
     # require the branch name to be master (note for PRs this is the base branch name)
@@ -14,12 +20,7 @@ stages:
   - name: deploy:
     # require the branch name to be master (note for PRs this is the base branch name)
     if: branch = master
-    
-language: node_js
 
-node_js:
-  - 8.9.4
-  
 install:
   - npm install
   - npm install -g vsce
