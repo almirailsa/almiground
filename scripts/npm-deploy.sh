@@ -19,9 +19,9 @@
 tsc src/alminio/main.ts
 npm pack ./src/alminio
 
-echo "registry.npmjs.org/:_authToken=${1}" > .npmrc
+echo "//registry.npmjs.org/:_authToken=${1}" > .npmrc
 #echo "registry.npmjs.org/:_password=${1}" > .npmrc
-echo "registry.npmjs.org/:username=${3}" >> .npmrc
-echo "registry.npmjs.org/:email=${2}" >> .npmrc
+echo "//registry.npmjs.org/:username=${3}" >> .npmrc
+echo "//registry.npmjs.org/:email=${2}" >> .npmrc
 
 npm publish alminio*tgz
