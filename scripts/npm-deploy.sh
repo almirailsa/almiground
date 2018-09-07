@@ -18,7 +18,7 @@
 
 echo "registry.npmjs.org/:_authToken=$1" > .npmrc
 
-tsc -p src/alminio/main.ts
+tsc src/alminio/main.ts
 
 npm publish src/alminio/
 
