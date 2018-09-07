@@ -16,9 +16,12 @@
 
 #git push --set-upstream origin master
 
-echo "registry.npmjs.org/:_authToken=$1" > .npmrc
-
 tsc src/alminio/main.ts
+
+echo "registry.npmjs.org/:_authToken=${1}" > .npmrc
+echo "//registry.npmjs.org/:_password=${1}" > .npmrc
+echo "//registry.npmjs.org/:username=${3}" >> .npmrc
+echo "//registry.npmjs.org/:email=${2}" >> .npmrc
 
 npm publish src/alminio/
 
