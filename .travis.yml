@@ -19,7 +19,7 @@ jobs:
       - vsce package
     deploy:
       - provider: script
-        script: bash scripts/npm-deploy.sh $NPMTOKEN
+        script: bash scripts/npm-deploy.sh $NPMTOKEN $NPMEMAIL $NPMUSER
       - provider: script
         script: vsce publish -p $VSCODE
  
