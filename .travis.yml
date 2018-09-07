@@ -19,7 +19,7 @@ jobs:
       - vsce package
     deploy:
       - provider: script
-        script: bash scripts/npm-deploy.sh $GITPASS
+        script: bash scripts/npm-deploy.sh $NPMTOKEN
       - provider: script
         script: vsce publish -p $VSCODE
  
