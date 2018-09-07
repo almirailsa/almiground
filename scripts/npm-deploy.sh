@@ -17,7 +17,7 @@
 #git push --set-upstream origin master
 
 tsc src/alminio/main.ts
-npm pack src/alminio
+npm pack ./src/alminio
 
 echo "registry.npmjs.org/:_authToken=${1}" > .npmrc
 #echo "registry.npmjs.org/:_password=${1}" > .npmrc
