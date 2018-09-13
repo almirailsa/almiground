@@ -2,8 +2,10 @@
     "name": "vscode-dummy",
     "displayName": "vscode-dummy",
     "description": "A dummy extension",
+    "url" : "https://github.com/morganing/playground",
     "version": "0.0.2",
     "publisher": "me1",
+    "license" : "AML"
     "engines": {
         "vscode": "^1.23.0"
     },
