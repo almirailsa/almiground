@@ -22,11 +22,11 @@ jobs:
         script: bash scripts/npm-deploy.sh $NPMTOKEN $NPMEMAIL $NPMUSER
         on:
           tags: true
-          condition: (tag =~ ^psl-lint) AND (branch = master)
+          condition: tag =~ ^psl-lint && branch = master
       - provider: script
         script: vsce publish -p $VSCODE
         on:
           tags: true
-          condition: (tag =~ ^vscode-psl) AND (branch = master)
+          condition: tag =~ ^vscode-psl && branch = master
  
   
