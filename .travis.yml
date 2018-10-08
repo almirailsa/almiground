@@ -19,10 +19,9 @@ jobs:
       - vsce package
     deploy:
       - provider: script
-        script: bash scripts/npm-deploy.sh $NPMTOKEN $NPMEMAIL $NPMUSER
+        script: cp src/pslLint/cli/.npmrc.psl-lint $HOME/.npmrc && npm pack ./src/pslLint/cli | xargs npm publish
         on:
-          tags: true
-          condition: tag =~ ^psl-lint && branch = master
+          branch: master
       - provider: script
         script: vsce publish -p $VSCODE
         on:
