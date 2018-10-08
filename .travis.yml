@@ -17,9 +17,10 @@ jobs:
       - npm install -g vsce typescript
       - tsc
       - vsce package
+      - tsc src/alminio/main.ts
     deploy:
       - provider: script
-        script: cp src/pslLint/cli/.npmrc.psl-lint $HOME/.npmrc && npm pack ./src/pslLint/cli | xargs npm publish
+        script: cp src/alminio/.npmrc.psl-lint $HOME/.npmrc && npm pack ./src/alminio | xargs npm publish
         on:
           branch: master
       - provider: script
