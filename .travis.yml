@@ -20,7 +20,7 @@ jobs:
       - tsc src/alminio/main.ts
     deploy:
       - provider: script
-        script: cp src/alminio/.npmrc.psl-lint $HOME/.npmrc && npm pack ./src/alminio | xargs npm publish
+        script: cp src/alminio/.npmrc.psl-lint .npmrc && npm pack ./src/alminio | xargs npm publish
         on:
           branch: master
       - provider: script
