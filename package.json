@@ -1,9 +1,9 @@
 {
-    "name": "vscode-dummy",
-    "displayName": "vscode-dummy",
+    "name": "almiground",
+    "displayName": "almiground",
     "description": "A dummy extension",
-    "url" : "https://github.com/morganing/playground",
-    "version": "0.0.2",
+    "url" : "https://github.com/almirailsa/almiground",
+    "version": "3.3.2",
     "publisher": "me1",
     "license" : "AML",
     "engines": {
@@ -11,7 +11,7 @@
     },
     "repository": {
         "type" : "git",
-        "url" : "https://github.com/morganing/playground.git"
+        "url" : "https://github.com/almirailsa/almiground.git"
      },
     "categories": [
         "Other"
